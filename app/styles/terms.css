@@ -1,0 +1,24 @@
+.terms-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.terms-container h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.terms-container a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.terms-container a:hover {
+  color: #0056b3;
+}

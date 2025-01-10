@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Font Faces */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+html {
+  font-size: calc(16 * (100vw / 1440));
+}
+
+@media (max-width: 769px) {
+  html {
+    font-size: calc(16 * (100vw / 769));
+  }
+}
+
+@media (max-width: 478px) {
+  html {
+    font-size: calc(16 * (100vw / 375));
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: calc(16 * (100vw / 1440));
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: calc(16 * (100vw / 1800));
+  }
+}
+
+/* Base Styles */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "SF Pro Display", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: clamp(3.375rem, 2.6268rem + 3.1925vw, 5.5rem);
+  font-weight: 900;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 2.1919rem + 1.3146vw, 3.375rem);
+  font-weight: 700;
+  line-height: 110%;
+}
