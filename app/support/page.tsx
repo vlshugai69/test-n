@@ -24,7 +24,7 @@ const SupportPage = () => {
             >
               info@nuprizm.com
             </a>{' '}
-            and we'll get back to you shortly.
+            and we&apos;ll get back to you shortly.
           </p>
         </div>
       </main>
