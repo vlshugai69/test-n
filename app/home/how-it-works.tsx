@@ -90,7 +90,7 @@ const HowItWorks = () => {
                     isHighlighted
                       ? "bg-white pt-6 px-6 pb-[1.375rem]"
                       : "bg-[#1e1e37] p-6"
-                  } transition-all duration-500`}
+                  }`}
                   style={{
                     height: isHighlighted ? "auto" : "4.875rem",
                   }}

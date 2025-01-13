@@ -1,11 +1,66 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SlotMachineNumber from "../components/slot-machine-number";
 import Image from "next/image";
 
 const Problem = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const updateIsMobile = () => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 768);
+    }
+    setHoveredCard(null);
+  };
+
+  useEffect(() => {
+    updateIsMobile();
+
+    window.addEventListener("resize", updateIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", updateIsMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const cardIndex = parseInt(
+            entry.target.getAttribute("data-index") || "0"
+          );
+          if (entry.isIntersecting) {
+            setHoveredCard(cardIndex);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-300px",
+        threshold: 0,
+      }
+    );
+
+    if (isMobile) {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.observe(card);
+      });
+    }
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, [isMobile]);
+
+  const setCardRef = (index: number) => (el: HTMLDivElement | null) => {
+    cardRefs.current[index] = el;
+  };
 
   return (
     <div className="w-full px-[4.5rem] py-[8.75rem] flex flex-col justify-start items-start gap-20 bg-[#040420] max-xs:px-[1rem] max-xs:py-[5rem]">
@@ -25,11 +80,13 @@ const Problem = () => {
       <div className="w-full self-stretch flex justify-start items-center gap-5 max-sm:flex-col">
         {/* Card 1 */}
         <div
+          ref={setCardRef(0)}
+          data-index={1}
           className={`w-full max-w-[40.8%] h-[23.75rem] relative rounded-[2.5rem] overflow-hidden p-8 flex flex-col justify-between max-sm:max-w-none max-xs:p-6 ${
             hoveredCard === 1 ? "bg-[#923cfb]" : "bg-[#1E1E37]"
           } transition`}
-          onMouseEnter={() => setHoveredCard(1)}
-          onMouseLeave={() => setHoveredCard(null)}
+          onMouseEnter={() => !isMobile && setHoveredCard(1)}
+          onMouseLeave={() => !isMobile && setHoveredCard(null)}
         >
           {/* Background SVG */}
           {hoveredCard === 1 && (
@@ -116,11 +173,13 @@ const Problem = () => {
 
         {/* Card 2 */}
         <div
+          ref={setCardRef(1)}
+          data-index={2}
           className={`w-full max-w-[31%] h-[23.75rem] relative rounded-[2.5rem] overflow-hidden p-8 flex flex-col justify-between max-sm:max-w-none ${
             hoveredCard === 2 ? "bg-[#923cfb]" : "bg-[#1E1E37]"
           } transition`}
-          onMouseEnter={() => setHoveredCard(2)}
-          onMouseLeave={() => setHoveredCard(null)}
+          onMouseEnter={() => !isMobile && setHoveredCard(2)}
+          onMouseLeave={() => !isMobile && setHoveredCard(null)}
         >
           {/* Background SVG */}
           {hoveredCard === 2 && (
@@ -210,11 +269,13 @@ const Problem = () => {
 
         {/* Card 3 */}
         <div
+          ref={setCardRef(2)}
+          data-index={3}
           className={`w-full max-w-[25%] h-[23.75rem] relative rounded-[2.5rem] overflow-hidden p-8 flex flex-col justify-between max-sm:max-w-none ${
             hoveredCard === 3 ? "bg-[#923cfb]" : "bg-[#1E1E37]"
           } transition`}
-          onMouseEnter={() => setHoveredCard(3)}
-          onMouseLeave={() => setHoveredCard(null)}
+          onMouseEnter={() => !isMobile && setHoveredCard(3)}
+          onMouseLeave={() => !isMobile && setHoveredCard(null)}
         >
           {/* Background SVG */}
           {hoveredCard === 3 && (

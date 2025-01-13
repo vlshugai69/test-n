@@ -85,7 +85,7 @@ const Hero = () => {
         </div>
 
         {/* Device Image */}
-        <div className="absolute bottom-[0] right-[13.438rem] max-sm:relative max-sm:right-[0] max-xs:bottom-[-3.5rem] max-xs:-mt-8">
+        <div className="absolute bottom-[0] right-[13.438rem] max-sm:w-full max-sm:relative max-sm:right-[0] max-xs:bottom-[-3.5rem] max-xs:-mt-8">
           <Image
             src="/images/device-hero.png"
             alt="Device showcasing the app"
