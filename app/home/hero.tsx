@@ -33,7 +33,7 @@ const Hero = () => {
                 alt="Download on the App Store"
                 width={160}
                 height={80}
-                className="w-[10rem] h-[5rem]"
+                className="w-[10rem] h-[5rem] object-contain"
               />
             </div>
 
