@@ -11,9 +11,7 @@ const Problem = () => {
 
   const updateIsMobile = () => {
     if (typeof window !== "undefined") {
-      setTimeout(() => {
-        setIsMobile(window.innerWidth <= 768);
-      }, 100);
+      setIsMobile(window.innerWidth <= 768);
     }
     setHoveredCard(null);
   };
@@ -22,11 +20,9 @@ const Problem = () => {
     updateIsMobile();
 
     window.addEventListener("resize", updateIsMobile);
-    window.addEventListener("orientationchange", updateIsMobile);
 
     return () => {
       window.removeEventListener("resize", updateIsMobile);
-      window.removeEventListener("orientationchange", updateIsMobile);
     };
   }, []);
 
