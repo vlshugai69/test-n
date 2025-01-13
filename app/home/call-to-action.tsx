@@ -35,7 +35,7 @@ const CallToAction = () => {
             className="w-full h-full block"
           >
             <Image
-              src="/images/components/app-store-download-button.svg"
+              src="/images/components/app-store-download-button.webp"
               alt="Download on the App Store"
               width={160}
               height={80}

@@ -29,7 +29,7 @@ const Hero = () => {
             {/* App Store Badge */}
             <div>
               <Image
-                src="/images/components/app-store-download-button.svg"
+                src="/images/components/app-store-download-button.webp"
                 alt="Download on the App Store"
                 width={160}
                 height={80}
