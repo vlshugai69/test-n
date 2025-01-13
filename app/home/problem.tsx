@@ -10,11 +10,11 @@ const Problem = () => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const updateIsMobile = () => {
-    if (typeof window !== "undefined") {
-      setTimeout(() => {
-        setIsMobile(window.innerWidth <= 768);
-      }, 100);
-    }
+    // if (typeof window !== "undefined") {
+    setTimeout(() => {
+      setIsMobile(window.innerWidth <= 768);
+    }, 100);
+    // }
     setHoveredCard(null);
   };
 
