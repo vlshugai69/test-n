@@ -99,7 +99,7 @@ const Team = () => {
 
                   <div className="flex justify-between items-center">
                     <div>
-                      <h3 className="text-[1.5rem] !text-[#040420] font-normal md:text-[2.5rem] sm:font-bold leading-[100%] mb-[0.2rem]">
+                      <h3 className="text-[1.5rem] !text-[#040420] font-medium md:text-[2.5rem] sm:font-bold leading-[100%] mb-[0.2rem]">
                         {member.name}
                       </h3>
                       <p className="text-[#777777] text-lg md:text-xl font-normal font-sf-pro-display">
