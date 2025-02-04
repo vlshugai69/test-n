@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade } from "swiper/modules";
 import "swiper/css";
