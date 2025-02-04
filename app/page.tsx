@@ -4,7 +4,7 @@ import Hero from "./home/hero";
 import Problem from "./home/problem";
 import Solution from "./home/solution";
 import HowItWorks from "./home/how-it-works";
-import CallToAction from "./home/call-to-action";
+import CallToAction from "./components/call-to-action";
 
 const Page = () => {
   return (

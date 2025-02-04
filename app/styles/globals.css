@@ -15,6 +15,14 @@
   }
 }
 
+.swiper-slide {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
 /* Font Faces */
 @font-face {
   font-family: "SF Pro Display";
@@ -82,4 +90,36 @@ h2 {
   font-size: clamp(2.5rem, 2.1919rem + 1.3146vw, 3.375rem);
   font-weight: 700;
   line-height: 110%;
+}
+
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 479px) {
+  .menu-appear {
+    animation: menuAppear 0.3s ease forwards;
+  }
+
+  .menu-link {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  .menu-visible .menu-link:nth-child(1) {
+    animation: menuAppear 0.3s ease forwards 0.1s;
+  }
+  .menu-visible .menu-link:nth-child(2) {
+    animation: menuAppear 0.3s ease forwards 0.2s;
+  }
+  .menu-visible .menu-link:nth-child(3) {
+    animation: menuAppear 0.3s ease forwards 0.3s;
+  }
 }

@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex justify-between items-center w-full bg-[#040420] px-[4.5rem] py-[3.37rem] max-sm:px-[1rem] max-sm:py-[2rem] max-sm:flex-col-reverse max-sm:items-start">
+    <footer className="flex justify-between items-center w-full bg-[#040420] px-[4.5rem] py-[3.37rem] max-xs:px-[1rem] max-sm:py-[2rem] max-sm:flex-col-reverse max-sm:items-start">
       {/* Copyright Section */}
       <div className="text-[#c1c3cc] text-lg font-normal font-sf-pro-display leading-[25.20px] max-sm:mt-8">
         ©{currentYear} Nuprizm. All Rights Reserved.
