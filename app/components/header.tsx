@@ -5,10 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import useScrollHide from "../hooks/useScrollHide";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const { isVisible, isScrolled } = useScrollHide();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     if (window.innerWidth <= 479) {
@@ -16,6 +18,32 @@ const Header = () => {
 
       document.body.style.overflow = !isMenuOpen ? "hidden" : "unset";
     }
+  };
+
+  const getLinkClassName = (path: string) => {
+    const isActive = pathname === path;
+    const baseClasses =
+      "font-sans whitespace-nowrap w-full font-medium sm:text-[1.25rem] text-[1.75rem] hover:opacity-80 menu-link sm:menu-appear";
+
+    if (isMenuOpen) {
+      return `${baseClasses} text-white ${
+        path === "/"
+          ? "pb-8 border-b border-[#35354B]"
+          : path === "/about"
+          ? "pb-8 pt-8 border-b border-[#35354B]"
+          : "pt-8"
+      }`;
+    }
+
+    return `${baseClasses} ${
+      isActive
+        ? `${
+            isScrolled ? "text-[#06070D]" : "text-white"
+          } relative before:content-[''] before:radius-[0.25rem] before:block before:absolute before:w-[1rem] before:h-[0.25rem] before:bg-[#7F5AF0] before:bottom-[-0.5rem] before:left-1/2 before:-translate-x-1/2`
+        : isScrolled
+        ? "text-[#06070D]"
+        : "text-white"
+    }`;
   };
 
   return (
@@ -55,39 +83,21 @@ const Header = () => {
           <Link
             href="/"
             onClick={() => toggleMenu()}
-            className={`font-sans whitespace-nowrap w-full font-medium sm:text-[1.25rem] text-[1.75rem] hover:opacity-80 menu-link sm:menu-appear ${
-              isMenuOpen
-                ? "text-white pb-8 border-b border-[#35354B]"
-                : isScrolled
-                ? "text-[#06070D]"
-                : "text-white"
-            }`}
+            className={getLinkClassName("/")}
           >
             Home
           </Link>
           <Link
             href="/about"
             onClick={() => toggleMenu()}
-            className={`font-sans whitespace-nowrap w-full font-medium sm:text-[1.25rem] text-[1.75rem] hover:opacity-80 menu-link sm:menu-appear ${
-              isMenuOpen
-                ? "text-white pb-8 pt-8 border-b border-[#35354B]"
-                : isScrolled
-                ? "text-[#06070D]"
-                : "text-white"
-            }`}
+            className={getLinkClassName("/about")}
           >
             About us
           </Link>
           <Link
             href="/careers"
             onClick={() => toggleMenu()}
-            className={`font-sans whitespace-nowrap w-full font-medium sm:text-[1.25rem] text-[1.75rem] hover:opacity-80 menu-link sm:menu-appear ${
-              isMenuOpen
-                ? "text-white pt-8"
-                : isScrolled
-                ? "text-[#06070D]"
-                : "text-white"
-            }`}
+            className={getLinkClassName("/careers")}
           >
             Careers
           </Link>
@@ -95,7 +105,7 @@ const Header = () => {
 
         <button
           onClick={toggleMenu}
-          className="sm:hidden rounded-[6.25rem] border-[1px] border-[solid] border-[#35354B] py-[0.5rem] px-[1rem] flex justify-center items-center z-50"
+          className="sm:hidden rounded-[6.25rem] border-[1px] border-[solid] border-[rgba(255,255,255,0.2)] py-[0.5rem] px-[1rem] flex justify-center items-center z-50"
           aria-label="Toggle menu"
         >
           <div

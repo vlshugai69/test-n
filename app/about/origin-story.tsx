@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const OriginStory = () => {
   const stats = [
     {
@@ -17,7 +19,14 @@ const OriginStory = () => {
   ];
 
   return (
-    <section className="bg-[#040420] h-[54rem] max-xl:h-auto px-[4.5rem] pt-[8.75rem] pb-[2.94rem] max-sm:px-[1rem] max-sm:py-[5rem]">
+    <section className="relative bg-[#040420] h-[54rem] max-xl:h-auto px-[4.5rem] pt-[8.75rem] pb-[2.94rem] max-sm:px-[1rem] max-sm:py-[5rem]">
+      <Image
+        src="/images/components/bg-decor.svg"
+        alt="Download on the App Store"
+        width={160}
+        height={80}
+        className="absolute left-0 top-[3.88rem] w-[37.84rem] h-[48.3rem] object-contain"
+      />
       <div className="flex flex-col max-w-[81rem] m-auto">
         <h2 className="w-[28.75rem] max-md:w-full text-white font-bold font-sf-pro-display leading-[3.7125rem] max-md:leading-[2.75rem] max-sm:leading-[2.2rem] mb-[2.5rem]">
           Origin Story

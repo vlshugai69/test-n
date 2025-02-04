@@ -6,9 +6,9 @@ const Hero = () => {
       {/* Background Layers */}
       <div className="absolute inset-0 bg-[#29015a]" />
       <div
-        className="absolute inset-0 mix-blend-soft-light bg-cover bg-center"
+        className="absolute w-full h-full right-0 bg-cover bg-top"
         style={{
-          backgroundImage: "url('/images/hero-background.png')",
+          backgroundImage: "url('/images/home-hero-bg.webp')",
         }}
       />
 
