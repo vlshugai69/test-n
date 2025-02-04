@@ -49,7 +49,7 @@ const Header = () => {
           className={`sm:flex sm:space-x-8 transition-opacity duration-300 ${
             isMenuOpen
               ? "fixed min-h-screen inset-0 bg-[#040420] z-40 flex flex-col items-start pt-[5.69rem] px-4 sm:relative sm:inset-auto sm:bg-transparent sm:pt-0 md:px-0 menu-visible opacity-100"
-              : "absolute min-h-screen sm:flex opacity-0 sm:opacity-100"
+              : "absolute sm:static opacity-0 sm:opacity-100"
           }`}
         >
           <Link
