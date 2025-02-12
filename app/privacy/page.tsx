@@ -1,37 +1,41 @@
 "use client";
 
+import { useEffect } from "react";
 import "../styles/privacy-policy.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function PrivacyPolicy() {
+  useEffect(() => {
+    const fetchPolicy = async () => {
+      try {
+        const response = await fetch('https://www.iubenda.com/api/privacy-policy/61463494/no-markup');
+        const data = await response.json();
+        const policyContainer = document.getElementById('policy-container');
+        if (policyContainer && data.content) {
+          const cleanContent = data.content
+            .replace(/{"success":true,"content":"/, '')
+            .replace(/"}\s*$/, '')
+            .replace(/\\n/g, '\n')
+            .replace(/\\"/g, '"');
+          
+          policyContainer.innerHTML = cleanContent;
+        }
+      } catch (error) {
+        console.error('Error fetching policy:', error);
+      }
+    };
+
+    fetchPolicy();
+  }, []);
+
   return (
-    <div className="privacy-policy">
-      <h1>Privacy Policy</h1>
-      <a
-        href="https://www.iubenda.com/privacy-policy/26346216"
-        className="iubenda-nostyle iubenda-embed iub-no-markup iub-body-embed"
-        title="Privacy Policy"
-      >
-        View our Privacy Policy
-      </a>
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `(function (w, d) {
-              var loader = function () {
-                  var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-                  s.src = "https://cdn.iubenda.com/iubenda.js";
-                  tag.parentNode.insertBefore(s, tag);
-              };
-              if (w.addEventListener) {
-                  w.addEventListener("load", loader, false);
-              } else if (w.attachEvent) {
-                  w.attachEvent("onload", loader);
-              } else {
-                  w.onload = loader;
-              }
-          })(window, document);`,
-        }}
-      />
-    </div>
+    <>
+      <Header />
+      <div className="privacy-policy">
+        <div id="policy-container" />
+      </div>
+      <Footer />
+    </>
   );
 }

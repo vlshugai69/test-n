@@ -3,18 +3,18 @@
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
 
-const PlatformRecruiterPosition = () => {
+const FacebookPosition = () => {
   return (
     <main className="w-full">
       <Header />
       
       <div className="min-h-screen bg-[#040420]">
-        <div className="h-[144px]" />
+        <div className="h-[144px]" /> {/* 72px header height + 72px spacing */}
         <div className="px-[4.5rem] pb-[140px] max-xs:px-[1rem]">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-6">
               <h1 className="text-white text-[40px] sm:text-[45px] md:text-[50px] lg:text-[54px] font-bold font-sf-pro-display leading-[1.1]">
-                Platform Recruiter
+                Social Media Intern - Facebook
               </h1>
               <div className="flex flex-wrap gap-2">
                 <div className="h-[40px] px-[16px] rounded-[32px] border border-[#923dfb] inline-flex items-center justify-center">
@@ -29,14 +29,17 @@ const PlatformRecruiterPosition = () => {
                 </div>
                 <div className="h-[40px] px-[16px] rounded-[32px] border border-[#923dfb] inline-flex items-center justify-center">
                   <div className="text-white text-[16px] font-medium font-sf-pro-display leading-none">
-                    $110-120k
+                    Intern
                   </div>
                 </div>
               </div>
             </div>
 
             <p className="text-[#c1c3cc] text-[20px] font-normal font-sf-pro-display leading-[1.4]">
-              We are seeking a product-oriented CTO with deep experience in AI and ML to join us at the forefront of a pivotal mission. As a key member of our founding team, your role goes beyond technical mastery; you will be a driving force in using AI, ML and other advanced technologies to reshape the way we consume news.
+              As a Social Media Intern for our Facebook account, you will be responsible for creating insightful content about key trending news articles each day, as well as engaging with 
+              our followers and other accounts. You should be an active user of the platform, and keenly aware of Facebook&apos;s many tools to build community and increase follower count. Our
+              interns are expected to have a commanding grasp on the English language and the capability to identify the subtle use of language, framing, and sentiment that drives
+              narratives in news media and online. <strong>Note: this is an unpaid role for a 90 day internship. We accept applications on a rolling basis for each internship period.</strong>
             </p>
 
             <div className="flex flex-col gap-3">
@@ -44,11 +47,11 @@ const PlatformRecruiterPosition = () => {
                 Responsibilities
               </h2>
               <ul className="list-disc marker:text-[0.75em] pl-8 text-[#c1c3cc] text-[18px] font-normal font-sf-pro-display leading-[1.4] [&>li]:mt-2">
-                <li className="marker:align-[40%]">Lead the implementation of AI to support our feature roadmap.</li>
-                <li className="marker:align-[40%]">Architect and scale our technical infrastructure to support a rapidly growing user base.</li>
-                <li className="marker:align-[40%]">Collaborate closely with the founder to align the technical roadmap with overall business strategy.</li>
-                <li className="marker:align-[40%]">Implement new features by committing code and reviewing PRs, while managing technical debt.</li>
-                <li className="marker:align-[40%]">Maintain server uptime to guarantee consistent, reliable access to the platform.</li>
+                <li className="marker:align-middle">Curate and share insightful content from news articles about current events.</li>
+                <li className="marker:align-middle">Engage with followers, thought leaders, and news organizations to foster meaningful conversations.</li>
+                <li className="marker:align-middle">Monitor trends, influencers, and breaking news to ensure timely and relevant content.</li>
+                <li className="marker:align-middle">Analyze Facebook analytics to measure engagement and evolve our strategy.</li>
+                <li className="marker:align-middle">A 10 hour time commitment each week (~2 hours per day).</li>
               </ul>
             </div>
 
@@ -57,10 +60,12 @@ const PlatformRecruiterPosition = () => {
                 Qualifications
               </h2>
               <ul className="list-disc marker:text-[0.75em] pl-8 text-[#c1c3cc] text-[18px] font-normal font-sf-pro-display leading-[1.4] [&>li]:mt-2">
-                <li className="marker:align-[40%]">Proven experience in AI, ML, and/or NLP with a strong portfolio of projects that demonstrate your expertise.</li>
-                <li className="marker:align-[40%]">A hands-on leader with a product-oriented mindset and experience in startup environments.</li>
-                <li className="marker:align-[40%]">Strategic thinker with the ability to translate complex technical concepts into actionable plans and the flexibility to shift focus as the business demands.</li>
-                <li className="marker:align-[40%]">Excellent and responsive communicator with the ability to engage effectively with all stakeholders.</li>
+                <li className="marker:align-middle">Keen interest in news, politics, or media.</li>
+                <li className="marker:align-middle">Strong vocabulary and command of the English language.</li>
+                <li className="marker:align-middle">Excellent writing and communication skills, with an understanding of Facebook community building tools.</li>
+                <li className="marker:align-middle">Familiarity with Facebook trends, dynamics, and best practices.</li>
+                <li className="marker:align-middle">Ability to create engaging, concise, and impactful content.</li>
+                <li className="marker:align-middle">Self-starter with the ability to manage deadlines.</li>
               </ul>
             </div>
 
@@ -69,10 +74,9 @@ const PlatformRecruiterPosition = () => {
                 Preferred
               </h2>
               <ul className="list-disc marker:text-[0.75em] pl-8 text-[#c1c3cc] text-[18px] font-normal font-sf-pro-display leading-[1.4] [&>li]:mt-2">
-                <li className="marker:align-[40%]">5+ years as a senior+ level developer.</li>
-                <li className="marker:align-[40%]">3+ years as a technical and/or research lead.</li>
-                <li className="marker:align-[40%]">Experience with full-stack development and cloud architectures.</li>
-                <li className="marker:align-[40%]">Prior startup experience where you have successfully scaled technology.</li>
+                <li className="marker:align-middle">College students studying media, communications, journalism, or artifical intelligence.</li>
+                <li className="marker:align-middle">Experience creating content for a social account on Facebook or other platforms.</li>
+                <li className="marker:align-middle">Experience with content creation tools like Figma, Adobe, Canva, Capcut, etc.</li>
               </ul>
             </div>
 
@@ -81,16 +85,14 @@ const PlatformRecruiterPosition = () => {
                 Benefits
               </h2>
               <ul className="list-disc marker:text-[0.75em] pl-8 text-[#c1c3cc] text-[18px] font-normal font-sf-pro-display leading-[1.4] [&>li]:mt-2">
-                <li className="marker:align-[40%]">5% - 15% equity</li>
-                <li className="marker:align-[40%]">Fully remote, with regular travel for collaboration</li>
-                <li className="marker:align-[40%]">Flexible vacation</li>
-                <li className="marker:align-[40%]">Company-supplied Apple M2 laptop</li>
-                <li className="marker:align-[40%]">Opportunity to shape the future of digital news</li>
+                <li className="marker:align-middle">Fully remote</li>
+                <li className="marker:align-middle">Flexible working time</li>
+                <li className="marker:align-middle">Opportunity to shape the future of digital news</li>
               </ul>
             </div>
 
             <a 
-              href="mailto:info@nuprizm.com?subject=Platform Recruiter Application"
+              href="mailto:info@nuprizm.com?subject=Social Media Intern - Facebook Application"
               className="mt-8 h-[52px] px-11 py-[18px] bg-[#35354b] rounded-[100px] text-white text-[16px] font-medium font-sf-pro-display leading-none hover:bg-white hover:text-[#923dfb] transition-colors self-start inline-flex items-center justify-center"
             >
               Apply Now
@@ -103,4 +105,4 @@ const PlatformRecruiterPosition = () => {
   );
 };
 
-export default PlatformRecruiterPosition;
+export default FacebookPosition;

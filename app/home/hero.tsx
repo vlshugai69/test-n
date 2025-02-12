@@ -22,7 +22,7 @@ const Hero = () => {
                 Powering the Search for Truth
               </h1>
               <p className="text-[#c1c3cc] text-[1.75rem] font-normal font-sf-pro-display leading-[140%] max-sm:text-[1.25rem]">
-                Dissect bias in the news <br /> with AI and public sentiment.
+                Discover bias in the news <br /> with AI and public sentiment.
               </p>
             </div>
 
@@ -85,13 +85,13 @@ const Hero = () => {
         </div>
 
         {/* Device Image */}
-        <div className="absolute bottom-[0] right-[13.438rem] max-sm:w-full max-sm:relative max-sm:right-[0] max-xs:bottom-[-3.5rem] max-xs:-mt-8">
+        <div className="absolute bottom-[0] sm:flex sm:items-end sm:max-w-[27rem] sm:max-h-[42.875rem] sm:h-full w-full right-[13.438rem] max-sm:w-full max-sm:relative max-sm:right-[0] max-sm:flex max-sm:justify-center max-xs:bottom-[-3.5rem] max-xs:-mt-8">
           <Image
             src="/images/device-hero.png"
             alt="Device showcasing the app"
             width={432}
             height={686}
-            className="object-cover w-full max-w-[27rem] h-auto xl:w-[27rem]"
+            className="object-cover w-full h-full xl:w-[27rem]"
           />
         </div>
       </div>

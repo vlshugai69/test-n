@@ -24,13 +24,14 @@ const Solution = () => {
         <div className="w-full text-[#06070d] text-[3.375rem] font-bold font-sf-pro-display leading-[110%]">
           <h2>
             We&apos;re building <br />
-            the future of news transparency
+            transparency <br />
+            into the news
           </h2>
         </div>
         <div className="w-full max-w-[38.875rem] text-[#777777] text-[1.75rem] font-normal font-sf-pro-display leading-[140%] max-sm:text-[1.25rem]">
-          Nuprizm fuses AI-powered media insights and public sentiment to bring
+          Nuprizm fuses AI-powered insights and public sentiment to bring
           transparency to the news. By analyzing bias, language, framing,
-          sentiment and millions of other parameters, we bring clarity to
+          context, and millions of other parameters, we bring clarity to
           current events amongst a sea of competing narratives.
         </div>
       </div>
@@ -54,7 +55,7 @@ const Solution = () => {
             Intelligent Summaries
           </div>
           <div className="text-[#777777] text-[1.25rem] font-normal font-sf-pro-display mt-[0.75rem] leading-[140%] max-sm:text-center">
-            We use AI to scour hundreds of sources to give you the facts fast.
+            We use AI to analyze thousands of articles in real-time to give you the facts fast.
           </div>
         </div>
 

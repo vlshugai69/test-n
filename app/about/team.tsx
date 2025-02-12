@@ -12,6 +12,7 @@ const Team = () => {
       name: "Tomás Sidenfaden",
       role: "Founder & CEO",
       background: "bg-[#923cfb]",
+      linkedIn: "https://www.linkedin.com/in/tomás-sidenfaden/",
       experience: [
         "Hardware PM for Guitar Center's $50m private technology brands",
         "7 years full-stack + native mobile software engineer",
@@ -22,6 +23,7 @@ const Team = () => {
       name: "Pascal Simpkins",
       role: "CTO",
       background: "bg-[#61cf86]",
+      linkedIn: "https://www.linkedin.com/in/pascalsimpkins/",
       experience: [
         "Drove +18% global revenue at EPCVIP through AI initiatives",
         "Created computer vision system that delivered $20m in savings",
@@ -32,6 +34,7 @@ const Team = () => {
       name: "Jeff Chien",
       role: "Advisor",
       background: "bg-[#ffcd43]",
+      linkedIn: "https://www.linkedin.com/in/actionableinsights/",
       experience: [
         "20+ years in AI-driven research and market intelligence",
         "Digital transformation for Google, DoD, FBI, Dell, Intel, Gates Foundation",
@@ -107,8 +110,9 @@ const Team = () => {
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href={member.linkedIn}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 bg-[#040420] rounded-[50%] md:rounded-[50%] flex items-center justify-center"
                     >
                       <img

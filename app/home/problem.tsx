@@ -45,14 +45,18 @@ const Problem = () => {
       }
     );
 
+    // Capture current refs
+    const currentCards = cardRefs.current;
+
     if (isMobile) {
-      cardRefs.current.forEach((card) => {
+      currentCards.forEach((card) => {
         if (card) observer.observe(card);
       });
     }
 
     return () => {
-      cardRefs.current.forEach((card) => {
+      // Use captured refs in cleanup
+      currentCards.forEach((card) => {
         if (card) observer.unobserve(card);
       });
     };
@@ -70,9 +74,9 @@ const Problem = () => {
           <h2>It&apos;s hard to trust the news</h2>
         </div>
         <div className="grow text-[#c1c3cc] max-w-[38.875rem] text-[1.75rem] font-normal font-sf-pro-display leading-[140%] max-xs:text-[1.25rem]">
-          Noise, misinformation, and vitriol overwhelm the quest for knowledge
-          and understanding of current events. Existing platforms incentivize
-          rancor and discord, polluting the public square.
+          Bias, noise, and misinformation overwhelm the quest for knowledge
+          and understanding of current events. Existing social platforms incentivize
+          engagement over meaningful conversations.
         </div>
       </div>
 
@@ -166,7 +170,7 @@ const Problem = () => {
               } text-lg font-normal leading-[1.125rem] transition max-xs:text-[1.125rem]`}
             >
               The sheer volume of online content makes it difficult to find
-              valuable, relevant information.
+              reliable, relevant information.
             </div>
           </div>
         </div>
@@ -261,7 +265,7 @@ const Problem = () => {
                 hoveredCard === 2 ? "text-white" : "text-[#c1c3cc]"
               } text-lg font-normal leading-[140%] transition max-xs:text-[1.125rem]`}
             >
-              The prevalence of false and misleading news undermines public
+              The prevalence of misleading narratives undermines public
               trust.
             </div>
           </div>
@@ -348,7 +352,7 @@ const Problem = () => {
               </div>
 
               <div className="text-[0.9375rem] font-semibold uppercase leading-tight text-white ml-[1.25rem] max-xs:ml-[1rem]">
-                feel worn out by the news.
+                have been harassed online.
               </div>
             </div>
 
@@ -357,7 +361,7 @@ const Problem = () => {
                 hoveredCard === 3 ? "text-white" : "text-[#c1c3cc]"
               } text-[1.125rem] font-normal leading-[140%] transition max-xs:text-[1.125rem]`}
             >
-              The volume of content makes it hard to find relevant information.
+              People are afraid to share their opinions online.
             </div>
           </div>
         </div>

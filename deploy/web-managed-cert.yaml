@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: web-production-managed-cert
+spec:
+  domains:
+    - www.nuprizm.com

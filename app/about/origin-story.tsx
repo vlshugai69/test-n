@@ -9,8 +9,8 @@ const OriginStory = () => {
       label: "Daily Articles Analyzed",
     },
     {
-      number: "40%",
-      label: "Misinformation Reduction",
+      number: "96%",
+      label: "Bias Detection Rate",
     },
     {
       number: "200+",
@@ -36,24 +36,24 @@ const OriginStory = () => {
           {/* Text Content */}
           <div className="max-w-[50.19rem] w-full flex flex-col gap-[1rem]">
             <p className="text-[#c1c3cc] text-[1.75rem] max-md:text-[1.5rem] max-sm:text-[1.25rem] font-normal font-sf-pro-display leading-[2.45rem] max-md:leading-[2.1rem] max-sm:leading-[1.75rem]">
-              Social platforms once promised connection and community, but their
-              shift toward engagement-first models deeply impacted news media.
-              Publishers, driven by social media incentives, prioritized
-              sensationalism, leading to clickbait headlines, biased framing,
-              and eroded trust.
+              When the presidential election cycle of 2016 ended in an unexpected upset,
+              our founder asked himself &quot;how did we not see this coming?&quot; It was clear that 
+              bias in journalism was leaving us misinformed and that people were afraid to express 
+              how they really felt in public and on social media.
             </p>
             <p className="text-[#c1c3cc] text-[1.75rem] max-md:text-[1.5rem] max-sm:text-[1.25rem] font-normal font-sf-pro-display leading-[2.45rem] max-md:leading-[2.1rem] max-sm:leading-[1.75rem]">
-              Nuprizm was created to restore transparency and accountability in
-              journalism. Using AI and public sentiment analysis, we uncover
-              bias and elevate truth, empowering people to navigate the media
-              landscape with clarity and trust.
+              He envisioned a platform that helped reveal bias in the news, combined with a social
+              experience that enabled private feedback, rewarded depth of knowledge, and optimized for 
+              constructive dialog. But he didn&apos;t know how to code, so he switched careers and taught himself
+              how, got published in media, recruited a team, and built the platform end-to-end on 
+              nights and weekends while working full time as a software engineer.   
+
             </p>
             <p className="text-[#c1c3cc] text-[1.75rem] max-md:text-[1.5rem] max-sm:text-[1.25rem] font-normal font-sf-pro-display leading-[2.45rem] max-md:leading-[2.1rem] max-sm:leading-[1.75rem]">
-              Social platforms once promised connection and community, but their
-              shift toward engagement-first models deeply impacted news media.
-              Publishers, driven by social media incentives, prioritized
-              sensationalism, leading to clickbait headlines, biased framing,
-              and eroded trust.
+              When LLMs became readily accessible in 2023, we knew immediately how they could supercharge our mission to 
+              reveal bias in the news by analyzing narrative, context, sentiment, language, framing, and millions
+              of other parameters in real-time across the media ecosystem at large. We&apos;re incredibly excited for
+              the road ahead and for the opportunity to attack one of society&apos;s most pernicious problems. Join us! 
             </p>
           </div>
 

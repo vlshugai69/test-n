@@ -1,24 +1,66 @@
 .terms-container {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
-  background-color: #f9f9f9;
+  padding-top: calc(6rem + 20px);
+  background-color: black;
+  overflow-x: hidden;
 }
 
-.terms-container h1 {
-  font-size: 32px;
+.terms-container #terms-container {
+  color: #c1c3cc;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.terms-container h1,
+.terms-container #terms-container > h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: bold;
-  color: #333;
+  color: white;
   margin-bottom: 20px;
 }
 
+.terms-container h2,
+.terms-container #terms-container > h2 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: bold;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.terms-container h3,
+.terms-container #terms-container > h3 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .terms-container a {
-  font-size: 18px;
-  color: #007bff;
+  color: #c1c3cc;
   text-decoration: underline;
 }
 
 .terms-container a:hover {
-  color: #0056b3;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .terms-container {
+    padding: 15px;
+    padding-top: calc(6rem + 15px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .terms-container {
+    padding: 10px;
+    padding-top: calc(4rem + 10px);
+  }
 }

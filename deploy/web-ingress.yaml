@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "web-production-static-ip-cluster-2"
+    kubernetes.io/ingress.class: "gce"
+    networking.gke.io/managed-certificates: web-production-managed-cert
+    networking.gke.io/v1beta1.FrontendConfig: web-production-ssl-redirect
+  labels:
+    app: web
+spec:
+  defaultBackend:
+    service:
+      name: web
+      port:
+        number: 80

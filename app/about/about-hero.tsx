@@ -8,9 +8,7 @@ const AboutHero = () => {
           Mission
         </h1>
         <p className="font-sf-pro-display font-normal text-center text-[#c1c3cc] max-w-[54.5625rem] text-[1.25rem] sm:text-[1.75rem] leading-[1.4]">
-          Nuprizm was founded with a vision to make news more transparent and
-          trustworthy, using technology to help people understand the truth
-          behind the headlines in an era of misinformation.
+          Our mission is to empower citizens with the tools to navigate bias in the news and shape public sentiment to create a more informed and enlightened society.
         </p>
       </div>
     </section>

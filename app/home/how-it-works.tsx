@@ -7,23 +7,23 @@ const HowItWorks = () => {
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const featureData = [
     {
-      title: "Intelligent Summaries",
+      title: "Intelligent summaries",
       description:
-        "We use AI to scour hundreds of sources to give you the facts fast.",
+        "Get fast insights into the most important news of the day.",
       imgSrc: "/images/topical-summary-device.png",
       iconSrc: "/images/components/intelligent-summaries-icon.svg",
       highlightColor: "#923CFB", // Purple
     },
     {
-      title: "Dissect media narratives with AI",
-      description: "Understand the key points with clarity.",
+      title: "Deconstructed media narratives",
+      description: "Discover bias, context, and sentiment with interactive tools.",
       imgSrc: "/images/media-engine-device.png",
       iconSrc: "/images/components/dissect-narratives-icon.svg",
       highlightColor: "#31CD64", // Green
     },
     {
-      title: "Shape public opinion",
-      description: "Influence conversations effectively.",
+      title: "An honest public square",
+      description: "Privately weigh in on the most important issues of the day.",
       imgSrc: "/images/rating-device.png",
       iconSrc: "/images/components/opinion-icon.svg",
       highlightColor: "#F7B600", // Yellow
@@ -70,11 +70,11 @@ const HowItWorks = () => {
           {/* Heading and Subtext */}
           <div className="flex flex-col gap-6">
             <div className="text-white font-bold font-sf-pro-display">
-              <h2>Experience nuprizm in action</h2>
+              <h2>Experience how to become truly informed</h2>
             </div>
             <div className="text-[#c1c3cc] text-[1.75rem] font-normal font-sf-pro-display leading-[140%] max-sm:text-[1.25rem]">
               Discover how Nuprizm empowers you to navigate the complex media
-              landscape with ease and insight.
+              landscape with ease and confidence.
             </div>
           </div>
 

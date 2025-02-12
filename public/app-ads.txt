@@ -1,0 +1,2 @@
+placeholder.example.com, placeholder, DIRECT, placeholder
+facebook.com, 1727421614104756, RESELLER, c3e20eee3f780d68

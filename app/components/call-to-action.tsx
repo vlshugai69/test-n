@@ -16,14 +16,14 @@ const CallToAction = () => {
       <div className="relative z-10 flex flex-col justify-center items-center gap-8 text-center max-w-[67rem] max-xs:gap-4">
         {/* Heading */}
         <h2 className="text-white font-bold font-sf-pro-display">
-          Ready to Transform Your News Experience?
+          Ready to go beyond the narrative?
         </h2>
 
         {/* Subtext */}
         <p className="text-white text-xl font-normal font-sf-pro-display leading-7 opacity-80 max-w-[53.6rem]">
-          Nuprizm uses AI to cut through the noise, uncover biases, track
-          sentiment, and compare perspectives. Join the conversation with
-          ratings, comments, and polls.
+          Nuprizm fuses AI-powered insights and public sentiment to cut through the noise, 
+          uncover bias, track sentiment, and compare perspectives. Join the conversation with 
+          news, ratings, comments, and polls.
         </p>
 
         {/* App Store Badge */}

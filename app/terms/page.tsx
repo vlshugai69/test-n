@@ -1,38 +1,41 @@
 "use client";
 
+import { useEffect } from "react";
 import "../styles/terms.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function TermsOfService() {
+  useEffect(() => {
+    const fetchTerms = async () => {
+      try {
+        const response = await fetch('https://www.iubenda.com/api/terms-and-conditions/61463494/no-markup');
+        const data = await response.json();
+        const termsContainer = document.getElementById('terms-container');
+        if (termsContainer && data.content) {
+          const cleanContent = data.content
+            .replace(/{"success":true,"content":"/, '')
+            .replace(/"}\s*$/, '')
+            .replace(/\\n/g, '\n')
+            .replace(/\\"/g, '"');
+          
+          termsContainer.innerHTML = cleanContent;
+        }
+      } catch (error) {
+        console.error('Error fetching terms:', error);
+      }
+    };
+
+    fetchTerms();
+  }, []);
+
   return (
-    <div className="terms-container">
-      <h1>Terms of Service</h1>
-      <a
-        href="https://www.iubenda.com/terms-and-conditions/22801921"
-        className="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe iub-body-embed"
-        title="Terms and Conditions"
-      >
-        View our Terms of Service
-      </a>
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `(function (w, d) {
-              var loader = function () {
-                  var s = d.createElement("script"),
-                      tag = d.getElementsByTagName("script")[0];
-                  s.src = "https://cdn.iubenda.com/iubenda.js";
-                  tag.parentNode.insertBefore(s, tag);
-              };
-              if (w.addEventListener) {
-                  w.addEventListener("load", loader, false);
-              } else if (w.attachEvent) {
-                  w.attachEvent("onload", loader);
-              } else {
-                  w.onload = loader;
-              }
-          })(window, document);`,
-        }}
-      />
-    </div>
+    <>
+      <Header />
+      <div className="terms-container">
+        <div id="terms-container" />
+      </div>
+      <Footer />
+    </>
   );
 }
