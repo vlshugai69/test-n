@@ -82,7 +82,7 @@ html {
 
 @media (min-width: 2400px) {
   html {
-    font-size: calc(16 * (100vw / 900));
+    font-size: calc(16 * (100vw / 2600));
   }
 }
 
