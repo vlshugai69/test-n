@@ -80,12 +80,6 @@ html {
   }
 }
 
-@media (min-width: 2400px) {
-  html {
-    font-size: calc(16 * (100vw / 2400));
-  }
-}
-
 /* Base Styles */
 body {
   color: var(--foreground);
