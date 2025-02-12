@@ -80,21 +80,11 @@ html {
   }
 }
 
-@media (min-width: 2400px) {
-  html {
-    font-size: calc(16 * (100vw / 2600));
-  }
-}
-
-@media (min-width: 3500px) {
-  html {
-    font-size: calc(16 * (100vw / 3800));
-  }
-}
-
-@media (min-width: 4500px) {
-  html {
-    font-size: calc(16 * (100vw / 4800));
+@supports (-webkit-appearance: none) {
+  @media (min-width: 1600px) {
+    html {
+      font-size: calc(1rem + ((100vw - 1600px) / 200));
+    }
   }
 }
 
